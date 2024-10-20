@@ -1,0 +1,367 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Start Header Top */
+
+/* End Header Top */
+
+
+/* Start Header Bottom */
+
+header.header-bottom {
+    width: 100%;
+    padding: 17px 130px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    max-width: 230px;
+}
+
+@media(max-width: 426px) {
+    .logo {
+        max-width: 150px;
+    }
+}
+
+.side-menu {}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+    color: #232f4b;
+}
+
+
+.menu a:hover {
+    background-color: #ffc107;
+
+}
+
+.submenu,
+.nested-submenu {
+    list-style-type: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    padding-top: 25px;
+    background-color: #fff;
+    display: none;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.submenu li {
+    position: relative;
+}
+
+.submenu a {
+    padding: 10px 20px;
+    white-space: nowrap;
+    color: #13287e;
+}
+
+
+
+
+.header-bottom-contect-us a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 70px;
+    gap: 20px;
+    text-decoration: none;
+    background: #247ffb;
+    padding: 5px 30px 5px 5px;
+    color: #fff;
+    border-radius: 0 40px 40px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: border-radius 0.3s, color 0.3s;
+}
+
+.header-bottom-contect-us a i {
+    background: #fff;
+    padding: 13px;
+    border-radius: 0 50% 50%;
+    color: #13287e;
+    font-size: 1rem;
+    font-weight: 500;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-radius 0.3s, color 0.3s;
+}
+
+.header-bottom-contect-us:hover a,
+.header-bottom-contect-us a:hover i {
+    border-radius: 40px 40px 40px 0;
+}
+
+.menu-icon,
+.close-icon {
+    display: none;
+}
+
+@media(max-width: 1462px) {
+
+    .header-top,
+    header.header-bottom {
+        padding: 17px 100px;
+    }
+}
+
+@media(max-width: 1236px) {
+
+    .header-top,
+    header.header-bottom {
+        padding: 17px 70px;
+    }
+
+}
+
+@media(max-width: 1036px) {
+
+    .header-top,
+    header.header-bottom {
+        padding: 17px 40px;
+    }
+
+    .header-top-side-left i,
+    .header-top-side-right a {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 896px) {
+
+    .header-top,
+    header.header-bottom {
+        padding: 17px 40px;
+
+    }
+
+    .header-top-side-left i,
+    .header-top-side-right a {
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 1098px) {
+
+    .header-bottom-contect-us a {
+        background: none;
+    }
+
+    .header-bottom-contect-us a span {
+        display: none;
+    }
+
+    .header-bottom-contect-us a i {
+        background: #247ffb;
+        color: #fff;
+    }
+}
+
+@media(max-width: 991px) {
+    header.header-bottom {
+        padding: 5px;
+    }
+
+
+
+    /* أيقونة القائمة */
+    .menu-icon {
+        font-size: 30px;
+        cursor: pointer;
+        margin: 15px;
+        display: block;
+        background-color: #247ffb;
+        padding: 0 4px;
+        color: #fff;
+        border-radius: 5px;
+
+    }
+
+    /* القائمة الجانبية */
+    .side-menu {
+        position: fixed;
+        left: -100%;
+        /* تبدأ خارج الشاشة */
+        top: 0;
+        width: 250px;
+        height: 100vh;
+        background-color: #0b3d91;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        padding: 20px;
+    }
+
+    /* علامة الإغلاق */
+    .close-icon {
+        font-size: 30px;
+        color: white;
+        text-align: right;
+        cursor: pointer;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    /* تنسيق القائمة */
+    .menu {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .menu a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 10px 0;
+    }
+
+    .menu a:hover {
+        background-color: #0056b3;
+        padding-left: 10px;
+    }
+
+    /* القوائم الفرعية */
+    .submenu {
+        list-style: none;
+        margin-left: 15px;
+        display: none;
+    }
+
+    .dropdown:hover>.submenu {
+        display: block;
+    }
+}
+
+@media(max-width: 767px) {
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    h2.It-Works {
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 426px) {
+    .header-top-side-left {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-top {
+        padding: 17px 10px;
+    }
+
+}
+
+/* End Header Bottom */
+
+section.blog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 20px;
+}
+
+section.blog article.page-left-blog {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    gap: 50px;
+}
+
+section.blog article.page-left-blog article.post-blog {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+section.blog article.page-left-blog img.post-img {
+    width: 100%;
+}
+
+section.blog article.page-left-blog article.user-and-bubble-and-calendar {
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+section.blog article.page-left-blog article.user-and-bubble-and-calendar i {
+    color: #636893;
+    direction: ltr;
+}
+
+section.blog article.page-left-blog a.before-p {
+    text-decoration: none;
+    font-size: 27px;
+    color: black;
+}
+
+section.blog article.page-left-blog a.before-p:hover,
+section.blog article.page-left-blog a.read-more:hover {
+    color: #08772c;
+}
+
+section.blog article.page-left-blog p {
+    color: #636893;
+}
+
+section.blog article.page-left-blog a.read-more {
+    color: black;
+}
+@media(max-width: 913px){
+    section.blog article.page-left-blog {
+        width: 90%;
+
+    }
+}
+@media(max-width: 505px){
+    section.blog article.page-left-blog article.user-and-bubble-and-calendar {
+        flex-direction: column;
+    }
+}

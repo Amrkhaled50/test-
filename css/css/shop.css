@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.shop-page {
+    position: relative;
+    text-align: center;
+    display: inline-block; 
+    margin: 50px auto; 
+}
+
+.shop-page img {
+    width: auto; 
+    max-width: 100%;
+    opacity: 0.6; 
+    display: block;
+    height: 300px;
+}
+
+.shop-page h2 {
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    z-index: 1;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+}
+
+
+/* start product*/
+
+.view-products {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(33% - 40px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.price strike {
+    color: red;
+    font-size: 1rem;
+}
+
+.price h4 {
+    color: green;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.buy-button {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.product:hover .buy-button {
+    bottom: 20px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.buy-button:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 992px) {
+    .product {
+        width: calc(50% - 40px); 
+    }
+}
+
+@media (max-width: 600px) {
+    .product {
+        width: 100%; 
+    }
+
+    .products {
+        gap: 10px;
+    }
+}
+

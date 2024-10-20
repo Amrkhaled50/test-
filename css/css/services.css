@@ -1,0 +1,260 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+/* Start We Do */
+.shop-page {
+    position: relative;
+    text-align: center;
+    display: inline-block; 
+}
+
+.shop-page img {
+    width: auto; 
+    max-width: 100%;
+    opacity: 0.6; 
+    display: block;
+    height: 300px;
+}
+
+.shop-page h2 {
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    z-index: 1;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+}
+/* Start We Do */
+
+article.content-what-we {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    align-items: center;
+}
+
+article.content-what-we article.we-do {
+    display: flex;
+    flex-direction: column;
+    /* max-width: 80%; */
+    gap: 20px;
+}
+
+article.content-what-we article.we-do h2 {
+    font-size: 40px;
+    color: #13287e;
+}
+
+article.content-what-we article.we-do p {
+    color: #7A7A7A;
+    width: 80%;
+}
+
+article.content-what-we article.residential-and-commercial {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+article.content-what-we article.residential {
+    background-color: #fde023;
+    width: 200px;
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 4px 4px 20px;
+    color: #13287e;
+    border-radius: 50px 50px 0 50px;
+    align-items: center;
+    transition: border-radius 0.3s, color 0.3s;
+}
+
+article.content-what-we article.residential:hover,
+article.content-what-we article.residential:hover i {
+    border-radius: 50px 0 50px 50px;
+}
+
+article.content-what-we article.residential span,
+article.content-what-we article.commercial span {
+    font-size: 25px;
+}
+
+article.content-what-we article.residential i {
+    font-size: 20px;
+    border-radius: 50px 50px 0 50px;
+    background: #13287e;
+    color: #fff;
+    padding: 10px;
+    transition: border-radius 0.3s, color 0.3s;
+}
+
+article.content-what-we article.commercial {
+    background-color: #eee;
+    width: 200px;
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    color: #13287e;
+    padding: 4px 20px 4px 4px;
+    border-radius: 0 50px 50px 50px;
+    align-items: center;
+    transition: border-radius 0.3s, color 0.3s;
+}
+
+article.content-what-we article.commercial:hover,
+article.content-what-we article.commercial:hover i {
+    border-radius: 50px 50px 50px 0;
+}
+
+article.content-what-we article.commercial i {
+    color: #f6faff;
+    background: #13287e;
+    padding: 10px;
+    border-radius: 0 50px 50px 50px;
+    font-size: 20px;
+    transition: border-radius 0.3s, color 0.3s;
+}
+
+@media(max-width: 912px) {
+    article.content-what-we {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        font-size: 20px;
+    }
+    article.content-what-we article.we-do p {
+        width: 100%;
+    }
+}
+
+@media(max-width: 425px) {
+    article.content-what-we article.residential-and-commercial {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+section.Slider-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.wrapper {
+    width: 100%;
+
+}
+
+.wrapper i {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    text-align: center;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.wrapper .carousel {
+    gap: 16px;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.carousel .card {
+    list-style: none;
+    background: #f6faff;
+    cursor: pointer;
+    padding: 20px;
+    width: 15%;
+    height: 165px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.carousel .card .img {
+    border-radius: 50%;
+}
+
+.card .img img {
+    width: 50px;
+
+}
+
+.card .img img {
+    background-color: #f6faff;
+
+}
+
+.carousel .card h2 {
+    font-weight: 500;
+    font-size: 1rem;
+
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+
+.carousel .card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+}
+
+@media(max-width: 1122px) {
+    .carousel .card {
+        height: 150px;
+    }
+}
+
+@media(max-width: 1000px) {
+    .carousel .card {
+        height: 120px;
+    }
+}
+
+@media(max-width: 856px) {
+    .carousel .card {
+        height: 110px;
+    }
+}
+
+@media(max-width: 856px) {
+    .carousel .card {
+        height: 110px;
+    }
+}
+
+@media(max-width: 912px) {
+    .wrapper .carousel {
+        flex-direction: column;
+    }
+
+    .carousel .card {
+        height: 110px;
+        width: 90%;
+    }
+}
+
+/* End We Do */
